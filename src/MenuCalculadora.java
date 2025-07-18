@@ -31,12 +31,22 @@ public class MenuCalculadora {
                 }
 
                 switch (opcion) {
-                    case 1 -> System.out.println("Resultado: " + (valor1 + valor2));
-                    case 2 -> System.out.println("Resultado: " + (valor1 - valor2));
-                    case 3 -> System.out.println("Resultado: " + (valor1 * valor2));
+                    case 1 -> {
+                        int resultadoS = valor1 + valor2;
+                        System.out.println("Resultado: " + resultadoS);
+                    }
+                    case 2 -> {
+                        int resultadoR = (valor1 - valor2);
+                        System.out.println("Resultado: " + resultadoR);
+                    }
+                    case 3 -> {
+                        int resultadoM = (valor1 * valor2);
+                        System.out.println("Resultado: " + resultadoM);
+                    }
                     case 4 -> {
                         if (valor2 != 0) {
-                            System.out.println("Resultado: " + ((double) valor1 / valor2));
+                            double resultadoD = ((double) valor1/ valor2);
+                            System.out.println("Resultado: " + resultadoD);
                         } else {
                             System.out.println("No se puede dividir por cero.");
                         }
