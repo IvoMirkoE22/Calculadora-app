@@ -1,9 +1,24 @@
 import java.util.Scanner;
-
+/**
+ * Clase que representa un menú para operar una calculadora básica.
+ * Permite al usuario realizar suma, resta, multiplicación y división.
+ * @author Ivo Narváez
+ * @version 1.0
+ */
 public class MenuCalculadora {
 
+    private final Calculadora operando;
     private final Scanner lector = new Scanner(System.in);
 
+    public MenuCalculadora(){
+        operando = new Calculadora();
+    }
+
+    /**
+     * Inicia el menú de opciones de la calculadora.
+     * Precondición: ninguna.
+     * Postcondición: el programa ejecuta operaciones hasta que el usuario elija salir.
+     */
     public void iniciarMenu() {
         boolean continuar = true;
         while (continuar) {
@@ -20,36 +35,33 @@ public class MenuCalculadora {
             try {
                 int opcion = Integer.parseInt(lector.nextLine());
 
-                int valor1 = 0;
-                int valor2 = 0;
+                double valor1 = 0;
+                double valor2 = 0;
+                double resultado;
 
                 if (opcion >= 1 && opcion <= 4) {
                     System.out.print("Ingrese el valor 1: ");
-                    valor1 = Integer.parseInt(lector.nextLine());
+                    valor1 = Double.parseDouble(lector.nextLine());
                     System.out.print("Ingrese el valor 2: ");
-                    valor2 = Integer.parseInt(lector.nextLine());
+                    valor2 = Double.parseDouble(lector.nextLine());
                 }
 
                 switch (opcion) {
                     case 1 -> {
-                        int resultadoS = valor1 + valor2;
-                        System.out.println("Resultado: " + resultadoS);
+                        resultado = operando.suma(valor1,valor2);
+                        System.out.println("Resultado: " + resultado);
                     }
                     case 2 -> {
-                        int resultadoR = (valor1 - valor2);
-                        System.out.println("Resultado: " + resultadoR);
+                        resultado = operando.resta(valor1,valor2);
+                        System.out.println("Resultado: " + resultado);
                     }
                     case 3 -> {
-                        int resultadoM = (valor1 * valor2);
-                        System.out.println("Resultado: " + resultadoM);
+                        resultado = operando.multiplicacion(valor1,valor2);
+                        System.out.println("Resultado: " + resultado);
                     }
                     case 4 -> {
-                        if (valor2 != 0) {
-                            double resultadoD = ((double) valor1/ valor2);
-                            System.out.println("Resultado: " + resultadoD);
-                        } else {
-                            System.out.println("No se puede dividir por cero.");
-                        }
+                        resultado = operando.division(valor1,valor2);
+                        System.out.println("Resultado: " + resultado);
                     }
                     case 5 -> {
                         System.out.println("Saliendo...");
