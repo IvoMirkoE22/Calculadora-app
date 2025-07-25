@@ -29,6 +29,7 @@ public class Calculadora {
      * Postcondición: El resultado es igual a valor1 - valor2.
      */
     public double resta(double valor1, double valor2){
+
         return (valor1 - valor2);
     }
     /**
@@ -60,7 +61,7 @@ public class Calculadora {
         if(valor2 == 0) {
             throw new IllegalArgumentException("El segundo valor (" + valor2 + ") es inválido. No se puede dividir por 0");
         }
-        return valor1 / valor2;
+        return (valor1 / valor2);
     }
 
 }

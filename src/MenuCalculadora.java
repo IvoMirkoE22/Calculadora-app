@@ -8,10 +8,11 @@ import java.util.Scanner;
 public class MenuCalculadora {
 
     private final Calculadora operando;
-    private final Scanner lector = new Scanner(System.in);
+    private final Scanner lector;
 
     public MenuCalculadora(){
         operando = new Calculadora();
+        lector = new Scanner(System.in);
     }
 
     /**

@@ -14,6 +14,10 @@ Este proyecto consiste en una **calculadora de consola** interactiva que permite
 - Lenguaje: **Java SE (Standard Edition)**
 - IDE: **IntelliJ IDEA**
 
+## Vista Previa (Consola)
+![Vista Previa](CalculadoraApp/Multimedia/Previa.jpg)
+
+
 ## 👨‍💻 Autor
 
 **Ivo Narvaez**  
