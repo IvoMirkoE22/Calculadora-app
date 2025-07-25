@@ -15,7 +15,7 @@ Este proyecto consiste en una **calculadora de consola** interactiva que permite
 - IDE: **IntelliJ IDEA**
 
 ## Vista Previa (Consola)
-![Vista Previa](CalculadoraApp/Multimedia/Previa.jpg)
+![Vista Previa](Multimedia/Previa.jpg)
 
 
 ## 👨‍💻 Autor
